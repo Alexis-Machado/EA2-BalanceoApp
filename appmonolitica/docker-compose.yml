@@ -2,7 +2,7 @@ version: "3.7"
 services:
   appmonolitica:
     container_name: appmonolitica
-    image: jmachadoa12/appmonolitica:v2
+    image: jmachado12/appmonolitica:v2
     build:
       context: .
       dockerfile: Dockerfile

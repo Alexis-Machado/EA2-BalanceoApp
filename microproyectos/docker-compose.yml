@@ -2,7 +2,7 @@ version: "3.7"
 services: 
  microproyectos01:
   container_name: microproyectos01
-  image: jmachadoa12/microproyectos:v1
+  image: jmachado12/microproyectos:v1
   build:
     context: .
   ports:
@@ -14,7 +14,7 @@ services:
 
  microproyectos02:
   container_name: microproyectos02
-  image: jmachadoa12/microproyectos:v1
+  image: jmachado12/microproyectos:v1
   ports:
    - "6001"     
   networks:
@@ -24,7 +24,7 @@ services:
 
  microproyectos03:
   container_name: microproyectos03
-  image: jmachadoa12/microproyectos:v1
+  image: jmachado12/microproyectos:v1
   ports:
    - "6001"     
   networks:
@@ -34,7 +34,7 @@ services:
    
  balanceador:
   container_name: balanceador_proyectos
-  image: jmachadoa12/balanceador_proyectos:v1.0
+  image: jmachado12/balanceador_proyectos:v1.0
   build:
    context: ./balanceador
   ports:

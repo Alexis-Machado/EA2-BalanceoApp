@@ -2,7 +2,7 @@ version: "3.7"
 services: 
  microuniversidades01:
   container_name: microuniversidades01
-  image: jmachadoa12/microuniversidades:v1
+  image: jmachado12/microappuniversidades:v1
   build:
     context: .
   ports:
@@ -14,7 +14,7 @@ services:
 
  microuniversidades02:
   container_name: microuniversidades02
-  image: jmachadoa12/microuniversidades:v1
+  image: jmachado12/microappuniversidades:v1
   ports:
    - "7000"     
   networks:
@@ -24,11 +24,11 @@ services:
 
  balanceador:
   container_name: balanceadoruniversidades
-  image: jmachadoa12/balanceadoruniversidades:v1
+  image: jmachado12/balanceadoruniversidades:v1
   build:
    context: ./balanceador
   ports:
-   - "8082:80"
+   - "7007:80"
   networks:
    - ase-acad
   depends_on:
